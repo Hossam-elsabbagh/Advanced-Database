@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Algorithms GUI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div>
+            <h1>Database Algorithms GUI</h1>
+            <p>A merged project for Buffer Pool Replacement and B+ Tree indexing.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="section-heading">
+                <h2>Buffer Pool Simulator</h2>
+                <p>Test LRU, LRU-2, CLOCK, and 2Q page replacement policies.</p>
+            </div>
+
+            <div class="grid form-grid">
+                <label>
+                    Policy
+                    <select id="buffer-policy">
+                        <option value="LRU">LRU</option>
+                        <option value="LRU-2">LRU-2</option>
+                        <option value="CLOCK">CLOCK</option>
+                        <option value="2Q">2Q</option>
+                    </select>
+                </label>
+                <label>
+                    Buffer Size
+                    <input id="buffer-size" type="number" min="1" value="3">
+                </label>
+                <label class="wide">
+                    Page Reference Sequence
+                    <input id="buffer-pages" type="text" value="1, 2, 3, 1, 4, 2, 5">
+                </label>
+            </div>
+            <button id="run-buffer">Run Buffer Simulation</button>
+            <div id="buffer-error" class="error"></div>
+            <div id="buffer-summary" class="summary"></div>
+            <div class="table-wrap">
+                <table id="buffer-table"></table>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <h2>B+ Tree Visualizer</h2>
+                <p>Insert keys, view the tree levels, follow the leaf chain, and run range search.</p>
+            </div>
+
+            <div class="grid form-grid">
+                <label>
+                    Tree Order
+                    <input id="tree-order" type="number" min="2" value="3">
+                </label>
+                <label>
+                    Value Prefix
+                    <input id="value-prefix" type="text" value="Record">
+                </label>
+                <label class="wide">
+                    Keys to Insert
+                    <input id="tree-keys" type="text" value="10, 20, 5, 15, 25, 30">
+                </label>
+                <label>
+                    Range Start
+                    <input id="range-start" type="number" value="10">
+                </label>
+                <label>
+                    Range End
+                    <input id="range-end" type="number" value="25">
+                </label>
+            </div>
+            <button id="build-tree">Build B+ Tree</button>
+            <div id="tree-error" class="error"></div>
+            <div id="tree-view" class="tree-view"></div>
+            <div id="leaf-chain" class="leaf-chain"></div>
+            <div id="range-results" class="range-results"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
