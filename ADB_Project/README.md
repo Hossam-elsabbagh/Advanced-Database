@@ -1,6 +1,6 @@
 # Database Algorithms GUI Project
 
-A merged database algorithms project built in Python and Flask. The project combines two separate academic implementations into one working web application:
+Advanced database project built in Python and Flask. The project combines two separate academic implementations into one working web application:
 
 1. Buffer Pool Replacement Simulator
 2. B+ Tree Indexing and Range Search Visualizer
@@ -167,7 +167,7 @@ Example request body:
 ## Project Structure
 
 ```text
-Merged_Database_GUI_Project/
+ADB_Project/
 ├── app.py
 ├── requirements.txt
 ├── README.md
