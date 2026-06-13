@@ -266,7 +266,7 @@ Replace YOUR_USERNAME and YOUR_REPOSITORY_NAME with your actual GitHub username 
 
 ## Author
 
-Ahmed Ashraf
+Hossam Elsabbagh
 
 Computer Science and AI Student
 
